@@ -1,5 +1,7 @@
 import pygame
 from constants import *
+from player import *
+from circleshape import *
 
 def main():
     # Define Screen with width and height
@@ -9,6 +11,9 @@ def main():
     clock = pygame.time.Clock()
     dt = 0
 
+    # Create player
+    player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+
     # Main Loop
     while True:
         # Checks if user closed window
@@ -17,6 +22,8 @@ def main():
                 return
         # Fill screen solid black
         screen.fill((0,0,0))
+        # Draw Player
+        player.draw(screen)
         # Update Screen
         pygame.display.flip()
         dt = clock.tick(60) / 1000

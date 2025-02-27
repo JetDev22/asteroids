@@ -22,6 +22,8 @@ def main():
                 return
         # Fill screen solid black
         screen.fill((0,0,0))
+        # update movement
+        player.update(dt)
         # Draw Player
         player.draw(screen)
         # Update Screen

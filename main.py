@@ -50,7 +50,7 @@ def main():
                 sys.exit()
             for bullet in shot:
                 if bullet.collision(item):
-                    item.kill()
+                    item.split()
                     bullet.kill()
         # Draw sprites
         for item in drawable:

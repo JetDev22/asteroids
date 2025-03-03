@@ -5,6 +5,7 @@ from constants import *
 from player import *
 from circleshape import *
 from asteroid import *
+from shot import *
 
 def main():
     # Define Screen with width and height
@@ -19,6 +20,8 @@ def main():
     drawable = pygame.sprite.Group()
     asteroid = pygame.sprite.Group()
     asteroids = pygame.sprite.Group()
+    shots = pygame.sprite.Group()
+    Shot.containers = (updatable, drawable)
     Player.containers = (updatable, drawable)
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = (updatable)
